@@ -15,7 +15,7 @@
  */
 // write your code here
 
-
+var itemsInCart: [String] = ["Chips", "Salsa", "Guacamole", "Red wine"]
 
 
 
@@ -25,7 +25,7 @@
  */
 // write your code here
 
-
+var listOfNumbers: [Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 
 
@@ -36,7 +36,9 @@
  */
 // write your code here
 
-
+for number in listOfNumbers {
+    print(number)
+}
 
 
 
@@ -47,7 +49,9 @@
  */
 // write your code here
 
-
+for item in itemsInCart {
+    print(item)
+}
 
 
 
@@ -58,6 +62,9 @@
  */
 // write your code here
 
+for item in itemsInCart {
+    print(item)
+}
 
 
 
@@ -69,9 +76,19 @@
  */
 // write your code here
 
+func namesAndGreetsArray(names: [String]) {
+    
+    for name in names {
+        
+        if name == "Michael" {
+            print("Top of the morning Michael!")
+        } else {
+            print("Good morning \(name)")
+        }
+    }
+}
 
-
-
+namesAndGreetsArray(["Sam", "Tom", "Michael"])
 
 
 /*: question7
@@ -79,11 +96,24 @@
  */
 // write your code here
 
+func arrayOfNumbers(myArray: [Int]) -> Int {
+    
+    var numberLess50 = 0
+    
+    for number in myArray {
+        
+        if number < 50 {
+            
+        numberLess50 += 1
+        }
+    }
+    
+    return numberLess50
+}
 
+let myArray = [40, 60, 50, 52, 59, 13, 90, 100, 5, 52, 51, 49]
 
-
-
-
+print(arrayOfNumbers(myArray))
 
 
 //: Check here on the solution branch for a link to the solution file
